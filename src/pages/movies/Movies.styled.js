@@ -9,7 +9,8 @@ export const ButtonMore = styled.button`
   cursor: pointer;
   margin: 30px auto;
 
-  &:hover {
+  &:hover,
+  :focus {
     color: white;
     background-color: orangered;
   }

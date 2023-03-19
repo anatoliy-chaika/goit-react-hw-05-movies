@@ -1,6 +1,6 @@
 import { BsSearch } from 'react-icons/bs';
 import PropTypes from 'prop-types';
-import { ButtonStyled, Input } from './SearchBar.styled';
+import { ButtonStyled, Form, Input } from './SearchBar.styled';
 
 const SearchBar = ({ onSubmit }) => {
   const handleSubmit = e => {
@@ -11,12 +11,12 @@ const SearchBar = ({ onSubmit }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit} autoComplete="off">
+    <Form onSubmit={handleSubmit} autoComplete="off">
       <Input type="text" name="query" />
       <ButtonStyled type="submit">
         <BsSearch />
       </ButtonStyled>
-    </form>
+    </Form>
   );
 };
 
