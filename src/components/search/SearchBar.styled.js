@@ -18,4 +18,5 @@ export const Input = styled.input`
 export const ButtonStyled = styled.button`
   border-radius: 5px;
   border: none;
+  cursor: pointer;
 `;

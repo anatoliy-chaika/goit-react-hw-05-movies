@@ -2,6 +2,7 @@ import MovieGallery from 'components/gallery/MovieGallery';
 import PropTypes from 'prop-types';
 import { useState, useEffect } from 'react';
 import { getMovies } from 'servises/getFilms';
+import { TitlerOfHome } from './Home.styled';
 
 const Home = () => {
   const [movies, setMovies] = useState([]);
@@ -19,9 +20,12 @@ const Home = () => {
   }, []);
 
   return (
-    <ul>
-      <MovieGallery array={movies} />
-    </ul>
+    <>
+      <TitlerOfHome>Trending list of movies for a day</TitlerOfHome>
+      <ul>
+        <MovieGallery array={movies} />
+      </ul>
+    </>
   );
 };
 

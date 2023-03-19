@@ -16,6 +16,25 @@ const Movies = () => {
   const { query, page } = params;
   const number = Number(page);
 
+  // useEffect(() => {
+  //   document.addEventListener('scroll', scrollHandler);
+
+  //   return function () {
+  //     document.removeEventListener('scroll', scrollHandler);
+  //   };
+  // }, []);
+
+  // const scrollHandler = e => {
+  //   if (
+  //     e.target.documentElement.scrollHeight -
+  //       (e.target.documentElement.scrollTop + window.innerHeight) <
+  //     100
+  //   ) {
+  //     console.log('scroll');
+  //     setSearchParams({ ...params, page: number + 1 });
+  //   }
+  // };
+
   useEffect(() => {
     if (!query) {
       setMovies([]);
@@ -31,7 +50,7 @@ const Movies = () => {
       }
     };
     fetchMovies();
-  }, [number, page, query, setTotal]);
+  }, [number, query]);
 
   const handleSubmit = newQuery => {
     if (newQuery.trim() === '') {
