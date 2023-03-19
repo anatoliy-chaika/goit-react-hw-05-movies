@@ -25,12 +25,27 @@ export const GlobalStyles = props => (
         background-color: #fff;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
+        background-color: #e6f2f2;
       }
 
       img {
         display: block;
         max-width: 100%;
         height: auto;
+      }
+
+      ul {
+        list-style: none;
+      }
+
+      a {
+        text-decoration: none;
+        color: black;
+        & {
+          :hover {
+            color: red;
+          }
+        }
       }
     `}
   />

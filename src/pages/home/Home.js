@@ -1,4 +1,5 @@
-import MovieGallery from 'components/MovieGallery';
+import MovieGallery from 'components/gallery/MovieGallery';
+import PropTypes from 'prop-types';
 import { useState, useEffect } from 'react';
 import { getMovies } from 'servises/getFilms';
 
@@ -10,7 +11,6 @@ const Home = () => {
       try {
         const { results } = await getMovies();
         setMovies(results);
-        console.log(results);
       } catch (error) {
         console.log(error);
       }
@@ -26,3 +26,7 @@ const Home = () => {
 };
 
 export default Home;
+
+Home.propTypes = {
+  movies: PropTypes.array,
+};
